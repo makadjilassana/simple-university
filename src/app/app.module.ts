@@ -112,6 +112,7 @@ import { BudgetSousProjetExplorationComponent } from './budget/Exploration/budge
 import { BudgetExplorationComponent } from './budget/Exploration/budget-exploration/budget-exploration.component';
 import { ExplorationComponent } from './budget/Exploration/exploration/exploration.component';
 import { DetailsOffresComponent } from './appel-offre/offres/details-offres/details-offres.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -152,7 +153,7 @@ import { DetailsOffresComponent } from './appel-offre/offres/details-offres/deta
     LivraisonsComponent,
 
     LivraisonListComponent,
-    //Evolution components
+    /*Evolution components*/
     EvolutionsPersonnelComponent,
     EvolutionPersonnelCreateComponent,
     EvolutionPersonnelListComponent,
@@ -168,7 +169,7 @@ import { DetailsOffresComponent } from './appel-offre/offres/details-offres/deta
     LoiEvolutionCreateComponent,
     LoiEvolutionTypePersonnelCreateComponent,
     LoiEvolutionTypePersonnelListComponent,
-    //Evaluation components
+    /*Evaluation components*/
     EvaluationNavbarComponent,
     ElementsComponent,
     MentionsComponent,
@@ -219,6 +220,7 @@ import { DetailsOffresComponent } from './appel-offre/offres/details-offres/deta
     BudgetExplorationComponent,
     ExplorationComponent,
     DetailsOffresComponent,
+    HomeComponent,
 
   ],
   imports: [

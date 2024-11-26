@@ -1,0 +1,83 @@
+/* Conteneur principal pour centrer le contenu */
+.content-container {
+  display: flex;
+  flex-direction: column; /* Organise les éléments verticalement */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte */
+  height: 50vh; /* Utilise 50% de la hauteur de la fenêtre */
+}
+
+/* Style pour l'image */
+.magic-image {
+  max-width: 90%; /* Taille maximale de l'image en fonction de la largeur de l'écran */
+  max-height: 90%; /* Taille maximale de l'image en fonction de la hauteur de l'écran */
+  border-radius: 15px; /* Coins arrondis */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre */
+  margin-bottom: 1rem; /* Espace entre l'image et le texte */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transitions pour les effets */
+}
+
+/* Effet magique au survol */
+.magic-image:hover {
+  transform: scale(1.05) rotate(1deg); /* Zoom et rotation légers */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Augmentation de l'ombre */
+}
+
+/* Style pour le texte */
+.welcome-text {
+  font-size: 1.5rem; /* Taille de police */
+  color: #333; /* Couleur du texte */
+  font-weight: bold; /* Texte en gras */
+  margin: 0; /* Supprime l'espace par défaut autour du texte */
+}
+
+/* Partie du bas avec fond marron */
+.bottom-background {
+  width: 80%;
+  height: 50%; /* Couvre la moitié inférieure */
+  border: 3px solid #000000; /* Bordure noire foncée */
+  box-sizing: border-box; /* Assurez-vous que la bordure ne modifie pas la largeur et hauteur de l'élément */
+}
+
+.university-text-animation {
+  font-size:30px; /* Agrandit la taille du texte */
+  font-weight: bold; /* Rends le texte plus gras (facultatif) */
+}
+/****************************** Animations pour l'image ****************************************/
+
+
+/* Animation d'écriture pour le texte */
+.text-animation {
+  display: inline-block; /* Nécessaire pour bien animer les lettres */
+  overflow: hidden; /* Cache les lettres non encore affichées */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  border-right: 2px solid #333; /* Curseur de saisie simulé */
+  animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
+  animation-delay: 0s, 5s; /* Synchronise le clignotement du curseur après l'écriture */
+  animation-iteration-count: infinite; /* Reprend l'animation en boucle */
+}
+
+/* Animation de saisie */
+@keyframes typing {
+  0% {
+    width: 0; /* Le texte commence vide */
+  }
+  90% {
+    width: 100%; /* Le texte est complètement affiché */
+  }
+  100% {
+    width: 100%; /* Maintenir le texte affiché */
+  }
+}
+
+/* Animation de clignotement du curseur */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333; /* Clignotement visible */
+  }
+}
+

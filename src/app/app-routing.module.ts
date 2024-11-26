@@ -26,8 +26,11 @@ import {ResponsabilitesComponent} from './mandat/responsabilites/responsabilites
 import {MandatsComponent} from './mandat/mandats/mandats.component';
 import {CompteBudgitaireComponent} from './budget/compte-budgitaire/compte-budgitaire.component';
 import {ExplorationComponent} from './budget/Exploration/exploration/exploration.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirection par défaut
+  { path: 'home', component: HomeComponent }, // Route pour 'home'
   {path: 'exepressionbesoins', component: ExpressionBesoinsComponent},
   {path: 'reception', component: ReceptionComponent},
   {path: 'magasin', component: MagasinComponent},
@@ -40,7 +43,7 @@ const routes: Routes = [
 
   {path: 'appleoffre', component: AppelOffreComponent},
 
-  {path: 'elements', component: ElementsComponent,},
+  {path: 'elements', component: ElementsComponent},
 
   {path: 'mentions', component: MentionsComponent},
   {path: 'notes', component: NotesComponent},
