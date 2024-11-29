@@ -1,39 +1,41 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%; /* Assure une largeur complète */
+  width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Empêche le défilement horizontal indésirable */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 .page-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* La page occupe toute la hauteur de l'écran */
-  width: 100%; /* La page occupe toute la largeur de l'écran */
-  overflow: hidden; /* Supprime tout débordement */
+  min-height: 100vh; /* La page occupe au moins toute la hauteur de l'écran */
 }
 
 .header {
-  flex: 0 0 auto; /* La hauteur du header est fixe */
-  width: 100%; /* Étendre le header sur toute la largeur */
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 .main {
-  flex: 1 1 auto; /* Le contenu principal s'étire pour remplir l'espace restant */
-  width: 100%; /* Étendre le contenu principal sur toute la largeur */
+  flex: 1 1 auto;
+  width: 100%;
+  overflow-y: auto; /* Ajoute le défilement vertical si nécessaire */
+  padding: 20px; /* Optionnel : espace pour le contenu */
 }
 
 .footer {
-  flex: 0 0 auto; /* La hauteur du footer est fixe */
-  width: 100%; /* Étendre le footer sur toute la largeur */
+  flex: 0 0 auto;
+  width: 100%;
+  background-color: #d8cab8; /* Conservez la couleur du footer */
 }
 
 img, video, iframe {
-  max-width: 100%; /* Empêche les médias de dépasser la largeur du parent */
-  height: auto; /* Maintient les proportions des médias */
+  max-width: 100%;
+  height: auto;
 }
 
 * {
   margin: 0;
+  box-sizing: border-box; /* Évite les débordements */
 }

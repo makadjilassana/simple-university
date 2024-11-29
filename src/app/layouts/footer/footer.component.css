@@ -1,3 +1,13 @@
 hr {
-  border: 1px solid #5e35b1; /* couleur purple */
+  border: 1px solid #FF8C00 ; /* couleur orange */
 }
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d8cab8;
+  font-size: 0.8rem;
+  z-index: 1000; /* Assure que le footer est toujours au-dessus d'autres éléments */
+}
+

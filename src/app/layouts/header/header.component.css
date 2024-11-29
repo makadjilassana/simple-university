@@ -1,15 +1,30 @@
 
 /************************* Décaler les menus à gauche, juste après l'image qui est ajustée abvec une taillle plus grande *******$********/
+
+.image-container {
+  text-align: center;
+  margin-right: 15px; /* Espace entre la ligne et le logo */
+  padding-right: 15px; /* Assure de l'espace pour la ligne */
+  border-right: 4px solid #d8cab8; /* Crée la ligne verticale avec une culeur marron */
+  height: 80px; /* Ajuste la hauteur de la ligne */
+}
+.logo-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .logo-img {
-  max-width: 250px; /* Ajuste la taille selon vos besoins */
+  max-width: 80px; /* Ajuster la taille selon les besoins */
   height: auto;
 }
 
 .navbar-collapse {
   display: flex;
-  align-items: center; /* Assure un alignement vertical des menus et de l'image */
+  align-items: center;
+  padding: 5px 10px; /* Diminue l'espace interne */
+  height: auto; /* Ajuste la hauteur automatiquement */
+  max-height: 100px; /* Limite la hauteur max */
 }
-
 .custom-nav {
   margin-left: 1rem; /* Ajoute un espace entre l'image et les menus */
 }
