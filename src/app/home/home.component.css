@@ -8,13 +8,29 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('/assets/img/logo_universite_rennes.png') no-repeat center center;
+  background: url('/assets/img/logo_universite_rennes.png') no-repeat center center,
+  linear-gradient(90deg, red, yellow, blue, green);
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  background-size: 50% 50%; /* Taille du dégradé pour l'animation */
+  animation: gradientAnimation; /* Animation du dégradé */
+}
+
+/* Animation du gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero h1 {
@@ -40,7 +56,7 @@ body {
 
 /* Actualités */
 .actualites {
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: #f4f4f4;
 }
 
