@@ -13,6 +13,9 @@ import {AppelOffreDetail} from '../../../controller/model/appel-offre-detail.mod
 export class AppelOffreCreateComponent implements OnInit {
 
   products: Array<Produit> = new Array<Produit>();
+  currentPage = 1;
+  itemsPerPage = 4;
+
 
   constructor(private appelOffreService: AppelOffreService, private produitService: ProduitService) {
   }
@@ -53,7 +56,7 @@ export class AppelOffreCreateComponent implements OnInit {
   recalcule(){
     this.appelOffre.montantTTC = this.appelOffre.montantHT * (1 + this.appelOffre.tva / 100);
   }
-  removeDetails(a:AppelOffreDetail) {
+  removeDetails(a: AppelOffreDetail) {
     let number=this.appelOffreDetails.indexOf(a);
     if(number!=null){
       this.appelOffre.montantHT -=a.total;
@@ -62,4 +65,27 @@ export class AppelOffreCreateComponent implements OnInit {
       this.appelOffreDetails.splice(number,1);
     }
   }
+  /*Pagination du tablrau d'appel d'offres */
+  get totalPages(): number {
+    const totalPages = Math.ceil(this.appelOffreDetails.length / this.itemsPerPage);
+    return totalPages === 0 ? 1 : totalPages;
+  }
+
+  get appelOffreDetailsDansTableauScrollable() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    return this.appelOffreDetails.slice(startIndex, startIndex + this.itemsPerPage);
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
 }
+
