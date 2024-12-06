@@ -20,8 +20,6 @@ html, body {
 .main {
   flex: 1 1 auto;
   width: 100%;
-  overflow-y: auto; /* Ajoute le défilement vertical si nécessaire */
-  padding: 20px; /* Optionnel : espace pour le contenu */
 }
 
 .footer {
@@ -33,9 +31,4 @@ html, body {
 img, video, iframe {
   max-width: 100%;
   height: auto;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box; /* Évite les débordements */
 }

@@ -10,7 +10,7 @@ body {
 .hero {
   background: url('/assets/img/logo_universite_rennes.png') no-repeat center center,
   linear-gradient(90deg, red, yellow, blue, green);
-  height: 400px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,8 +56,7 @@ body {
 
 /* Actualités */
 .actualites {
-  padding: 110px 20px;
-  background-color: #f4f4f4;
+  padding: 70px 20px;
 }
 
 .actualites h2 {
